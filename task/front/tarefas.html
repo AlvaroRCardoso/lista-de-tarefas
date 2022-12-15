@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="assets/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <ul class="nav nav-pills bg-mynav navbar-dark">
+        <li class="nav-item">
+            <a class="nav-link nav-link--black" href="tipos.html">Tipos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="tarefas.html">Tarefas</a>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="d-flex bd-highlight mb-3">
+            <div class="me-auto p-2 bd-highlight">
+                <h2>Tarefa
+            </div>
+            <div class="p-2 bd-highlight">
+                <button type="button" class="btn btn-secondary" onclick="showTarefaCreateBox()">Nova</button>
+                <button type="button" class="btn btn-secondary" onclick="generatePDF()">Criar PDF</button>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Data criação</th>
+                        <th scope="col">Data vencimento</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Situação</th>
+                        <th scope="col">Prioridade</th>
+                    </tr>
+                </thead>
+                <tbody id="mytable">
+                    <tr>
+                        <th scope="row" colspan="5">...</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/endpoint.js"></script>
+    <script src="js/tarefas_part.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
